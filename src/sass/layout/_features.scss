@@ -1,0 +1,42 @@
+.features {
+  text-align: center;
+  max-width: 100%;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 10rem;
+  padding-top: 20rem;
+  margin-top: -10rem;
+  background-color: $color-gray;
+
+  &__description {
+    margin-bottom: 10rem;
+  }
+
+  &__heading {
+    font-size: 4rem;
+    color: $color-dark-violet;
+
+    @include respond(mobile-land) {
+      font-size: 3.5rem;
+    }
+    @include respond(mobile) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__text {
+    @include respond(mobile-land) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__group {
+    display: flex;
+    text-align: left;
+
+    @include respond(mobile-land) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

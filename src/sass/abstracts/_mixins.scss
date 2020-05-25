@@ -1,0 +1,56 @@
+// Place content on middle of the viewport
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/********************
+Table of content for media queries
+Breakpoints:
+1: mobile 37.5em = 600px
+2: mobile-land 48em => 768px
+3: tab-port 56.25em => 900px
+4: tab-land 75em => 1200px
+5: desktop-lg 112.5em => 1800px
+6: small-height 26.25 => 420px
+********************/
+// Media Queries breakpoint for different screen sizes
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile-land {
+    @media (max-width: 48em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-lg {
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == small-height {
+    @media (max-height: 26.25em) {
+      @content;
+    }
+  }
+}

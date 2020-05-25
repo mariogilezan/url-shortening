@@ -1,0 +1,80 @@
+.action {
+  position: relative;
+  margin-top: 4rem !important;
+
+  &__bg {
+    border-radius: 0.7rem;
+    margin-top: 4rem;
+    background-color: $color-violet;
+    width: 100%;
+
+    @include respond(mobile-land) {
+      margin-top: 0;
+      height: 20rem;
+    }
+
+    img {
+      border-radius: 0.7rem;
+      width: 100%;
+      height: 100%;
+
+      @include respond(mobile-land) {
+        height: 20rem;
+      }
+    }
+  }
+
+  &__group {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    right: 3rem;
+    padding-right: 6rem;
+    display: flex;
+    justify-content: center;
+
+    @include respond(mobile-land) {
+      width: 95%;
+      padding: 4rem 0;
+      flex-direction: column;
+      align-items: center;
+      @include absCenter;
+    }
+  }
+
+  &__input {
+    width: 70%;
+    margin-right: 3rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.6rem;
+    border: 3px solid transparent;
+    outline: none;
+    border-radius: 0.7rem;
+
+    @include respond(mobile-land) {
+      width: 80%;
+      margin: 2rem auto;
+    }
+  }
+
+  ::placeholder {
+    color: $color-gray-violet;
+  }
+
+  &__btn {
+    border-radius: 0.7rem;
+    padding: 1.2rem 2rem;
+    font-weight: $font-weight-bold;
+    font-size: 1.6rem;
+
+    @include respond(mobile-land) {
+      width: 80%;
+      margin: 2rem auto;
+    }
+
+    @include respond(mobile) {
+      font-size: $btn-font;
+    }
+  }
+}

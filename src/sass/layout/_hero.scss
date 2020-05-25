@@ -1,0 +1,61 @@
+.hero {
+  margin-top: 2rem;
+  align-items: center;
+
+  &__description {
+    align-self: flex-start;
+
+    @include respond(mobile-land) {
+      margin-top: 4rem;
+      order: 2;
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  &__heading {
+    color: $color-dark-violet;
+    font-size: 5rem;
+    line-height: 1.2;
+
+    @include respond(mobile-land) {
+      font-size: 4rem;
+      padding-right: 0;
+    }
+    @include respond(mobile) {
+      font-size: 3.5rem;
+      padding-right: 0;
+    }
+  }
+
+  &__text {
+    @include respond(mobile-land) {
+      font-size: 1.6rem;
+      margin-top: 1.5rem;
+      padding-right: 0;
+    }
+  }
+
+  &__btn {
+    padding: 1.2rem 3.5rem;
+    font-size: 1.6rem;
+    font-weight: $font-weight-bold;
+
+    @include respond(mobile-land) {
+      width: 50%;
+    }
+
+    @include respond(mobile) {
+      width: 60%;
+      font-size: $btn-font;
+    }
+  }
+
+  &__img {
+    padding: 0;
+
+    @include respond(mobile-land) {
+      order: 1;
+    }
+  }
+}

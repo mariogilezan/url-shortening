@@ -1,0 +1,83 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: $color-white;
+  border-radius: 0.5rem;
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 7rem 2rem 5rem 2rem;
+
+  & {
+    @include respond(mobile-land) {
+      width: 100%;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-top: 3.5rem;
+    margin-bottom: -3.5rem;
+
+    @include respond(mobile-land) {
+      margin-top: 7rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-child(3) {
+    margin-top: 7rem;
+    margin-bottom: -7rem;
+
+    @include respond(mobile-land) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 2.5rem;
+
+    @include respond(mobile-land) {
+      margin-right: 0;
+    }
+  }
+
+  &:not(:last-child)::after {
+    content: '';
+    width: 2.5rem;
+    height: 0.5rem;
+    position: absolute;
+    top: 50%;
+    right: -2.5rem;
+    background-color: $color-primary;
+
+    @include respond(mobile-land) {
+      width: 0.5rem;
+      height: 3.5rem;
+      top: 100%;
+      left: calc(50% - 1rem);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: -3.5rem;
+    left: 2rem;
+    width: 7rem;
+    height: 7rem;
+    padding: 2rem;
+    border-radius: 50%;
+    background-color: $color-violet;
+
+    @include respond(mobile-land) {
+      left: calc(50% - 4rem);
+    }
+  }
+
+  &__img {
+    width: 3.5rem;
+    @include absCenter;
+  }
+
+  &__heading {
+    color: $color-dark-violet;
+  }
+}

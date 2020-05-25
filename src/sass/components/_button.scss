@@ -1,0 +1,25 @@
+.btn {
+  display: inline-block;
+  border: 0;
+  outline: 0;
+  padding: 0.8rem 2.5rem;
+  background-color: $color-primary;
+  color: $color-gray !important;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: background-color 0.2s !important;
+
+  &--round {
+    border-radius: 5rem;
+  }
+
+  @include respond(mobile-land) {
+    width: 90%;
+  }
+
+  &:hover,
+  &:active {
+    background-color: lighten($color-primary, 20%);
+  }
+}

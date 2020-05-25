@@ -1,0 +1,33 @@
+// COLORS
+$color-primary: hsl(180, 66%, 49%);
+$color-primary-light: hsl(180, 66%, 69%);
+
+$color-violet: hsl(257, 27%, 26%);
+$color-violet-light: hsl(257, 27%, 34%);
+
+$color-secondary: hsl(0, 87%, 67%);
+
+$color-gray-dark: hsl(0, 0%, 75%);
+$color-gray-violet: hsl(257, 7%, 63%);
+$color-dark-blue: hsl(255, 11%, 22%);
+$color-dark-violet: hsl(260, 8%, 14%);
+
+$color-black: #111;
+$color-gray: #efefef;
+$color-white: #fff;
+
+// FONTS
+$body-font: 1.8rem;
+$navbar-font: 1.6rem;
+$btn-font: 1.4rem;
+$menu-font: 2rem;
+
+$font-weight: 500;
+$font-weight-bold: 700;
+
+// LAYOUT
+$default-width: 120rem;
+$large-width: 125rem;
+
+// TRANSITIONS
+$default-transition: all 0.2s;

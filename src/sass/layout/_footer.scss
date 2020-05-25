@@ -1,0 +1,60 @@
+.footer {
+  background-color: $color-dark-violet;
+  color: $color-gray;
+  padding: 4rem 3.5rem;
+
+  @include respond(mobile-land) {
+    text-align: center;
+  }
+
+  &__logo--img {
+    width: 12rem;
+  }
+
+  &__group {
+    color: $color-gray;
+  }
+
+  &__heading {
+    font-size: 1.4rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    color: inherit;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 4rem !important;
+
+    @include respond(mobile-land) {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__social--link {
+    font-size: 0;
+    z-index: 10;
+  }
+
+  &__icon {
+    width: 2rem;
+  }
+}
